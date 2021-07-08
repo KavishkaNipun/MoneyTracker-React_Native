@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Text, View, StyleSheet } from 'react-native'
 
-const DetailScreen = () => {
+const DetailsScreen = () => {
     return (
       <View style = {styles.container}>
         <Text>Detail Screen</Text>
@@ -10,7 +10,7 @@ const DetailScreen = () => {
     );
   };
 
-export default  DetailScreen;
+export default  DetailsScreen;
 
 const styles= StyleSheet.create({
     container:{

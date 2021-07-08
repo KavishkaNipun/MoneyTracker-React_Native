@@ -6,7 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './scren/HomeScreen';
 import DetailsScreen from './scren/DetailsScreen';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { Icon } from 'react-native-vector-icons/Ionicons';
+import Icon  from 'react-native-vector-icons/Ionicons';
 
 
 
@@ -27,9 +27,14 @@ const HomeStackScreen = ({navigation}) =>(
       }
   
    }}>
-        <Stack.Screen name="Home" component={HomeScreen} 
-          />
-      </HomeStack.Navigator> 
+      <HomeStack.Screen name="Home" component={HomeScreen} options={{
+        title:'Overview',
+        headerLeft: () => (
+          <Icon.Button name="ios-menu" size={25} backgroundColor="#009387" onPress={()=> {navigation.
+            openDrawer();}}></Icon.Button>
+        )
+      }} />
+       </HomeStack.Navigator> 
   );
 
   const DetailsStackScreen = ({navigation}) =>(
@@ -44,7 +49,12 @@ const HomeStackScreen = ({navigation}) =>(
        }
    
     }}>
-         <Stack.Screen name="Details" component={DetailsScreen} />
+         <DetailsStack.Screen name="Details" component={DetailsScreen}  options={{
+        headerLeft: () => (
+          <Icon.Button name="ios-menu" size={25} backgroundColor="#009387" onPress={()=> {navigation.
+            openDrawer();}}></Icon.Button>
+        )
+      }} />
        </DetailsStack.Navigator> 
    )
 
