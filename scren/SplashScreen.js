@@ -9,6 +9,9 @@ import {
     Image
 } from 'react-native';
 
+import LinearGradient from 'react-native-linear-gradient';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+
 
 const SplashScreen = () => {
    
@@ -22,10 +25,25 @@ const SplashScreen = () => {
               
               />
           </View>
+
 <View style={styles.footer}>
-    <Text>Stay Connected With Your Money</Text>
-    <Text>Sign in with account</Text>
-    
+    <Text style={styles.title}>Stay Connected With Your Money</Text>
+    <Text style={styles.text}>Sign in with account</Text>
+    <TouchableOpacity onPress={()=>alert('Click')}>
+        <LinearGradient
+        colors={['#08d4c4', '#01ab9d']}
+        style={styles.signIn}
+        >
+            <Text style={styles.textSign}>Get Started</Text>
+        </LinearGradient>
+
+        <MaterialIcons 
+                        name="navigate-next"
+                        color="#fff"
+                        size={20}
+                    />
+    </TouchableOpacity>
+
 </View>
      </View>
     );
