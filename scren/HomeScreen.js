@@ -7,10 +7,8 @@ const HomeScreen = ({navigation}) => {
         <Text>Home Screen</Text>
         <Button
           title="Go to details screen"
-          onPress = {() => navigation.navigate("Details")
-          }
-        ></Button>
-  
+          onPress = {() => navigation.navigate("Details")}
+        />
       </View>
     );
   };
@@ -23,5 +21,5 @@ const styles = StyleSheet.create({
         flex:1, 
         alignItems: 'center', 
         justifyContent: 'center'
-    }
-})
+    },
+});
