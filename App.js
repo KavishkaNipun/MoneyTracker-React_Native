@@ -129,7 +129,7 @@ import {
   DarkTheme as PaperDarkTheme 
 } from 'react-native-paper';
 
-import { DrawerContent } from './screens/DrawerContent';
+import { DrawerContent } from './scren/DrawerContent';
 
 import MainTabScreen from './scren/MainTabScreen';
 // import SupportScreen from './screens/SupportScreen';
@@ -140,7 +140,7 @@ import { AuthContext } from './components/context';
 
 import RootStackScreen from './scren/RootStackScreen';
 
-import AsyncStorage from '@react-native-community/async-storage';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const Drawer = createDrawerNavigator();
 
